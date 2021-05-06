@@ -7,6 +7,15 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
     {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        url: "http://locavore.local/graphql",
+        schema: {
+          timeout: 100000,
+        },
+      },
+    },
+    {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
         /**
